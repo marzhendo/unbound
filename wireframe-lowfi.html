@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe Low-Fidelity — A Space for the Unbound Showcase</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Reset & memastikan font sistem bawaan tanpa kustomisasi */
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased">
+
+  <!-- =========================================================================
+       STATUS / ANNOTATION BAR (UNTUK REVIEW TIM)
+       ========================================================================= -->
+  <aside class="bg-gray-800 text-gray-200 text-xs px-4 py-2 text-center border-b border-gray-700">
+    <span class="font-bold uppercase tracking-wider">[WIREFRAME LOW-FIDELITY]</span> 
+    Fokus: Arsitektur Informasi, Grid Layout, Hirarki Tipografi, & Spacing Antar Section. 
+    (Greyscale murni, tanpa warna brand, tanpa font custom, tanpa animasi).
+  </aside>
+
+  <!-- =========================================================================
+       NAVBAR (STICKY)
+       ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Logo Placeholder -->
+      <div class="border border-gray-400 bg-gray-100 px-3 py-1 text-sm font-bold tracking-tight text-gray-800">
+        [LOGO: A SPACE FOR THE UNBOUND]
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
+        <a href="#home" class="border-b-2 border-gray-800 pb-0.5 text-gray-900">Home</a>
+        <a href="#characters" class="text-gray-600">Characters</a>
+        <a href="#gameplay" class="text-gray-600">Gameplay</a>
+        <a href="#news" class="text-gray-600">News</a>
+        <a href="#play" class="text-gray-600">Play Now</a>
+      </nav>
+
+      <!-- Nav CTA Button Placeholder -->
+      <div>
+        <a href="#play" class="border-2 border-gray-800 bg-gray-800 text-white px-4 py-2 text-xs font-bold uppercase tracking-wider inline-block">
+          [BTN: Mainkan]
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         SECTION 1: HOME (HERO SECTION)
+         ======================================================================= -->
+    <section id="home" class="border-b border-gray-300 bg-white py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        
+        <!-- Section Tag Indicator -->
+        <div class="mb-4 inline-block border border-gray-400 bg-gray-100 px-2 py-1 text-xs font-mono text-gray-600">
+          SECTION: #home (Hero)
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <!-- Text Content (7 cols desktop) -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Award Badge Placeholder -->
+            <div class="inline-block border border-gray-400 bg-gray-200 px-3 py-1 text-xs text-gray-700">
+              [BADGE: Best Storytelling — SEA Game Awards 2020]
+            </div>
+
+            <!-- Main Heading H1 -->
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-gray-900 leading-tight">
+              A SPACE FOR THE UNBOUND
+            </h1>
+
+            <!-- Tagline / Subtitle -->
+            <p class="text-lg sm:text-xl font-medium text-gray-700 italic">
+              "Dua remaja, satu kota kecil, dan kekuatan yang bisa menembus ingatan."
+            </p>
+
+            <!-- Body Narrative -->
+            <p class="text-base text-gray-600 leading-relaxed max-w-xl">
+              Ikuti kisah Atma dan Raya di kota Loka — sebuah desa kecil Indonesia di penghujung era 90-an — saat mereka menghadapi akhir masa SMA sekaligus rahasia yang bisa mengubah dunia mereka selamanya.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a href="#trailer" class="border-2 border-gray-800 bg-gray-800 text-white px-6 py-3 text-sm font-bold uppercase tracking-wider text-center">
+                [BTN: Tonton Trailer]
+              </a>
+              <a href="#play" class="border-2 border-gray-800 bg-white text-gray-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-center">
+                [BTN: Play Now]
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual Placeholder (5 cols desktop) -->
+          <div class="lg:col-span-5">
+            <div class="w-full h-80 sm:h-96 border-2 border-dashed border-gray-400 bg-gray-200 flex flex-col items-center justify-center p-6 text-center text-gray-500">
+              <span class="font-mono text-sm font-bold">[IMG: Hero Key Art / Visual Loka]</span>
+              <span class="text-xs mt-2 text-gray-500">(Placeholder latar malam berbintang & siluet kota Loka)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 2: CHARACTER / HERO
+         ======================================================================= -->
+    <!--
+      [CATATAN ASUMSI STRUKTUR #characters - KEDEKATAN EMOSIONAL & INTIMASI]:
+      1. Komposisi overlap lembut (Raya menyatu tumpang-tindih tipis ke ruang Atma dari kanan: lg:-ml-14 lg:mt-10)
+         menggantikan kesan perbandingan kaku "produk A vs produk B".
+      2. Menggambarkan kedekatan Atma & Raya sebagai sepasang kekasih yang saling terhubung erat, di mana pemain
+         menatap dunia melalui sudut pandang (POV) Atma yang berusaha memahami rahasia batin Raya.
+      3. Kedua card menggunakan garis tepi (border) dan perlakuan visual yang setara dan hangat (border-gray-300 / border-gray-400),
+         mencerminkan hubungan saling menopang dan keintiman emosional, bukan relasi hierarkis atau tensi dramatis.
+    -->
+    <section id="characters" class="border-b border-gray-300 bg-gray-50 py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <div class="inline-block border border-gray-400 bg-gray-200 px-2 py-1 text-xs font-mono text-gray-600">
+            SECTION: #characters
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold uppercase tracking-tight text-gray-900">
+            Tokoh Utama
+          </h2>
+          <p class="text-sm sm:text-base text-gray-600">
+            Dua insan di kota Loka yang saling terikat dalam rasa, ingatan, dan janji masa depan.
+          </p>
+        </div>
+
+        <!-- Intimate Overlap Character Layout (Kedekatan Emosional Sepasang Kekasih) -->
+        <div class="relative flex flex-col lg:flex-row items-center lg:items-start justify-center pb-6">
+          
+          <!-- Character Card 1: Atma (POV Protagonis / Dasar / Kiri) -->
+          <article class="w-full lg:w-7/12 border border-gray-300 bg-white p-6 sm:p-8 relative z-10">
+            <div class="flex flex-col sm:flex-row gap-6 items-start">
+              <!-- Portrait Placeholder (Ratio 3:4) -->
+              <div class="w-full sm:w-44 h-56 border-2 border-dashed border-gray-400 bg-gray-200 flex flex-col items-center justify-center p-4 text-center text-gray-500 shrink-0">
+                <span class="font-mono text-xs font-bold">[IMG: Atma Portrait]</span>
+                <span class="text-[10px] mt-1 text-gray-500">(Rasio 3:4 - Protagonis Utama)</span>
+              </div>
+              <!-- Bio Info -->
+              <div class="space-y-3 flex-1">
+                <div class="border-b border-gray-200 pb-2">
+                  <span class="text-xs font-mono uppercase text-gray-500">Tokoh Utama / POV</span>
+                  <h3 class="text-2xl font-bold text-gray-900">Atma</h3>
+                </div>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Pelajar SMA biasa di kota Loka. Tenang, sedikit pendiam, tapi diam-diam menyimpan mimpi menjadi penulis. Hidupnya berubah total ketika ia mulai memahami rahasia besar yang disimpan Raya.
+                </p>
+                <div class="pt-1">
+                  <span class="inline-block border border-gray-300 bg-gray-100 px-2.5 py-1 text-xs text-gray-700">
+                    Peran: Penulis &amp; Siswa SMA
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Character Card 2: Raya (Overlap Masuk ke Ruang Atma / Kanan) -->
+          <article class="w-full lg:w-6/12 border border-gray-400 bg-white p-6 sm:p-8 relative z-20 mt-6 lg:mt-10 lg:-ml-14">
+            <div class="flex flex-col sm:flex-row gap-6 items-start">
+              <!-- Portrait Placeholder (Ratio 3:4) -->
+              <div class="w-full sm:w-44 h-56 border-2 border-dashed border-gray-400 bg-gray-200 flex flex-col items-center justify-center p-4 text-center text-gray-500 shrink-0">
+                <span class="font-mono text-xs font-bold">[IMG: Raya Portrait]</span>
+                <span class="text-[10px] mt-1 text-gray-500">(Rasio 3:4 - Kekasih Atma)</span>
+              </div>
+              <!-- Bio Info -->
+              <div class="space-y-3 flex-1">
+                <div class="border-b border-gray-200 pb-2 flex items-center justify-between">
+                  <div>
+                    <span class="text-xs font-mono uppercase text-gray-500">Tokoh Utama</span>
+                    <h3 class="text-2xl font-bold text-gray-900">Raya</h3>
+                  </div>
+                  <span class="hidden sm:inline-block border border-gray-300 bg-gray-100 px-2 py-0.5 text-[10px] font-mono text-gray-500">
+                    [Overlap Intimasi]
+                  </span>
+                </div>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Kekasih Atma yang ceria namun menyimpan beban besar: kemampuan supernatural untuk "menyelam" ke dalam pikiran dan ingatan orang lain — sebuah kekuatan yang datang dengan risiko besar bagi dirinya sendiri.
+                </p>
+                <div class="pt-1">
+                  <span class="inline-block border border-gray-300 bg-gray-100 px-2.5 py-1 text-xs text-gray-600">
+                    Peran: Pemilik Kekuatan "Spacedive"
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Opsional: Warga Kota Loka Placeholder -->
+        <div class="mt-8 border border-dashed border-gray-300 bg-gray-100 p-4 text-center text-xs text-gray-500">
+          [SLOT OPSIONAL: Grid Thumbnail Karakter Pendukung / Warga Kota Loka]
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 3: GAMEPLAY / FEATURES
+         ======================================================================= -->
+    <!--
+      [CATATAN ASUMSI STRUKTUR #gameplay - ORGANIK & REALISME MAGIS PUITIS]:
+      1. Mengganti grid 2x2 kaku dengan staggered flow yang mengalir lembut dari kiri-atas ke kanan-bawah.
+         Mencerminkan transisi ke "Dive Mind" yang puitis dan penuh empati (animasi kelopak bunga melayang), bukan horor/tegang.
+      2. Card "Dive Mechanic" (Fitur 2) dibuat sebagai fitur sentral cerita yang lapang (lebar besar, padding lega p-8 sm:p-10),
+         namun menggunakan perlakuan visual yang lembut dan bernapas, menghindari kesan berat/menekan.
+      3. Tiga pilar pendukung (Jelajahi Kota Loka, Cerita yang Menyentuh, Seni Pixel yang Memukau) ditempatkan dengan ritme
+         asimetris organik untuk menghadirkan kehangatan petualangan pedesaan era 90-an.
+    -->
+    <section id="gameplay" class="border-b border-gray-300 bg-white py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <div class="inline-block border border-gray-400 bg-gray-100 px-2 py-1 text-xs font-mono text-gray-600">
+            SECTION: #gameplay
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold uppercase tracking-tight text-gray-900">
+            Fitur Permainan
+          </h2>
+          <p class="text-sm sm:text-base text-gray-600">
+            Kombinasi eksplorasi dunia nyata dan perjalanan batin lewat sentuhan realisme magis.
+          </p>
+          <div class="text-xs text-gray-500 font-mono">
+            *Catatan Visual: Section ini mengalirkan transisi lembut ke palet puitis "Dive Mind".
+          </div>
+        </div>
+
+        <!-- Organic Staggered Flow Layout -->
+        <div class="space-y-8 sm:space-y-10">
+
+          <!-- LANGKAH 1 (Kiri Atas): Eksplorasi Dunia Nyata -->
+          <div class="w-full lg:w-7/12 lg:mr-auto">
+            <article class="border border-gray-300 bg-gray-50 p-6 sm:p-7 flex gap-5 items-start">
+              <div class="w-14 h-14 border border-gray-400 bg-gray-200 flex items-center justify-center shrink-0 font-mono text-xs font-bold text-gray-700">
+                [IKON 1]
+              </div>
+              <div class="space-y-2 flex-1">
+                <span class="text-[11px] font-mono uppercase text-gray-500">Langkah 01 — Penjelajahan</span>
+                <h3 class="text-xl font-bold text-gray-900">1. Jelajahi Kota Loka</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Telusuri suasana pedesaan Indonesia era 90-an yang detail dan penuh cerita di setiap sudutnya.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- LANGKAH 2 (Kanan Tengah - SENTRAL CERITA & LEGA): Dive Mechanic -->
+          <div class="w-full lg:w-9/12 lg:ml-auto">
+            <article class="border border-gray-400 bg-gray-50 p-6 sm:p-10 space-y-5">
+              <div class="flex flex-wrap items-center justify-between border-b border-gray-300 pb-3 gap-2">
+                <div class="inline-block border border-gray-400 bg-gray-200 px-2.5 py-0.5 text-xs font-mono font-bold text-gray-800">
+                  [FITUR SENTRAL CERITA — DIVE MECHANIC]
+                </div>
+                <span class="text-xs font-mono text-gray-500 italic">Transisi Lembut &amp; Puitis (Kelopak Bunga Putih)</span>
+              </div>
+              
+              <div class="flex flex-col sm:flex-row gap-6 items-start">
+                <!-- Diagram / Ilustrasi Kelopak Bunga Puitis -->
+                <div class="w-full sm:w-40 h-40 border-2 border-dashed border-gray-400 bg-gray-200 flex flex-col items-center justify-center p-4 text-center text-gray-600 shrink-0">
+                  <span class="font-mono text-xs font-bold">[ILUSTRASI: DIVE]</span>
+                  <span class="text-[10px] mt-1 text-gray-500">(Bunga Pecah Jadi Kelopak Batin)</span>
+                </div>
+                <!-- Copy Detail dengan Spacing Bernapas -->
+                <div class="space-y-3 flex-1">
+                  <span class="text-[11px] font-mono uppercase text-gray-500">Langkah 02 — Realisme Magis</span>
+                  <h3 class="text-2xl font-bold text-gray-900">2. Dive Mechanic</h3>
+                  <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
+                    Gunakan kekuatan Raya untuk menyelam ke dalam pikiran warga kota, mengungkap ingatan dan rahasia tersembunyi.
+                  </p>
+                  <div class="pt-1 text-xs text-gray-500">
+                    *Alasan desain: Diberi ruang paling lapang sebagai inti ikatan emosional dan penyelaman batin penuh empati.
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- LANGKAH 3 (Kiri Bawah): Kedalaman Emosional -->
+          <div class="w-full lg:w-7/12 lg:mr-auto lg:pl-6">
+            <article class="border border-gray-300 bg-gray-50 p-6 sm:p-7 flex gap-5 items-start">
+              <div class="w-14 h-14 border border-gray-400 bg-gray-200 flex items-center justify-center shrink-0 font-mono text-xs font-bold text-gray-700">
+                [IKON 3]
+              </div>
+              <div class="space-y-2 flex-1">
+                <span class="text-[11px] font-mono uppercase text-gray-500">Langkah 03 — Resonansi Jiwa</span>
+                <h3 class="text-xl font-bold text-gray-900">3. Cerita yang Menyentuh</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Sebuah kisah slice-of-life yang mengangkat tema kecemasan, depresi, dan pertumbuhan diri dengan cara yang jujur dan hangat.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- LANGKAH 4 (Kanan Bawah): Estetika Lukisan Nostalgia -->
+          <div class="w-full lg:w-8/12 lg:ml-auto">
+            <article class="border border-gray-300 bg-gray-50 p-6 sm:p-7 flex flex-col sm:flex-row gap-5 items-start sm:items-center">
+              <div class="w-full sm:w-44 h-24 border-2 border-dashed border-gray-400 bg-gray-200 flex flex-col items-center justify-center p-2 text-center text-gray-500 shrink-0">
+                <span class="font-mono text-xs font-bold">[IMG: Pixel Art Showcase]</span>
+                <span class="text-[10px] mt-1 text-gray-500">(Panorama Hangat Kota Loka)</span>
+              </div>
+              <div class="space-y-1.5 flex-1">
+                <span class="text-[11px] font-mono uppercase text-gray-500">Langkah 04 — Pengalaman Visual</span>
+                <h3 class="text-xl font-bold text-gray-900">4. Seni Pixel yang Memukau</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Visual pixel art bergaya lukisan yang membangun suasana nostalgia di setiap frame.
+                </p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 4: NEWS / EVENT (TIMELINE)
+         ======================================================================= -->
+    <section id="news" class="border-b border-gray-300 bg-gray-50 py-16 sm:py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <div class="inline-block border border-gray-400 bg-gray-200 px-2 py-1 text-xs font-mono text-gray-600">
+            SECTION: #news
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold uppercase tracking-tight text-gray-900">
+            Linimasa & Penghargaan
+          </h2>
+          <p class="text-sm sm:text-base text-gray-600">
+            Rekam jejak perjalanan pengembangan dan pencapaian game.
+          </p>
+        </div>
+
+        <!-- Vertical Timeline Grid -->
+        <div class="relative border-l-2 border-gray-300 ml-4 sm:ml-32 space-y-8 py-2">
+
+          <!-- Milestone Item 1 -->
+          <div class="relative pl-6 sm:pl-8">
+            <!-- Marker Box (Kotak, konsisten low-fi pixel) -->
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-gray-700 border-2 border-white"></div>
+            <!-- Year Label (Desktop Absolute Left) -->
+            <div class="sm:absolute sm:-left-32 sm:top-1 text-xs sm:text-sm font-bold font-mono text-gray-700">
+              [2020]
+            </div>
+            <div class="border border-gray-300 bg-white p-4">
+              <h3 class="text-base font-bold text-gray-900">Best Storytelling — SEA Game Awards</h3>
+              <p class="text-sm text-gray-600 mt-1">
+                Meraih penghargaan Best Storytelling di SEA Game Awards pada masa awal pengembangan.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone Item 2 -->
+          <div class="relative pl-6 sm:pl-8">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-gray-700 border-2 border-white"></div>
+            <div class="sm:absolute sm:-left-32 sm:top-1 text-xs sm:text-sm font-bold font-mono text-gray-700">
+              [2022]
+            </div>
+            <div class="border border-gray-300 bg-white p-4">
+              <h3 class="text-base font-bold text-gray-900">Future Division Award — Japan Game Award</h3>
+              <p class="text-sm text-gray-600 mt-1">
+                Meraih penghargaan bergengsi Future Division Award pada Tokyo Game Show 2022.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone Item 3 -->
+          <div class="relative pl-6 sm:pl-8">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-gray-700 border-2 border-white"></div>
+            <div class="sm:absolute sm:-left-32 sm:top-1 text-xs sm:text-sm font-bold font-mono text-gray-700">
+              [19 JAN 2023]
+            </div>
+            <div class="border border-gray-300 bg-white p-4">
+              <h3 class="text-base font-bold text-gray-900">Rilis Resmi Multi-Platform</h3>
+              <p class="text-sm text-gray-600 mt-1">
+                Resmi diluncurkan secara global untuk PC (Steam), PlayStation 4/5, Xbox One/Series, dan Nintendo Switch.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone Item 4 -->
+          <div class="relative pl-6 sm:pl-8">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-gray-700 border-2 border-white"></div>
+            <div class="sm:absolute sm:-left-32 sm:top-1 text-xs sm:text-sm font-bold font-mono text-gray-700">
+              [2023]
+            </div>
+            <div class="border border-gray-300 bg-white p-4">
+              <h3 class="text-base font-bold text-gray-900">Nominee Games for Impact — The Game Awards</h3>
+              <p class="text-sm text-gray-600 mt-1">
+                Diakui secara global sebagai salah satu nominasi Games for Impact pada The Game Awards 2023.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone Item 5 -->
+          <div class="relative pl-6 sm:pl-8">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 bg-gray-700 border-2 border-white"></div>
+            <div class="sm:absolute sm:-left-32 sm:top-1 text-xs sm:text-sm font-bold font-mono text-gray-700">
+              [2025]
+            </div>
+            <div class="border border-gray-300 bg-white p-4">
+              <h3 class="text-base font-bold text-gray-900">Ekspansi ke iOS</h3>
+              <p class="text-sm text-gray-600 mt-1">
+                Kisah Loka kini dapat dinikmati pengguna perangkat mobile melalui rilis versi iOS.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 5: DOWNLOAD / PLAY NOW
+         ======================================================================= -->
+    <section id="play" class="border-b border-gray-300 bg-white py-16 sm:py-24">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        
+        <!-- Section Header -->
+        <div class="max-w-2xl mx-auto mb-10 space-y-3">
+          <div class="inline-block border border-gray-400 bg-gray-100 px-2 py-1 text-xs font-mono text-gray-600">
+            SECTION: #play
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-gray-900">
+            Dapatkan & Mainkan Sekarang
+          </h2>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Tersedia di PC (Steam), PlayStation 4/5, Xbox One/Series, Nintendo Switch, dan iOS. 
+            Klik salah satu platform di bawah untuk melihat halaman resmi & harga terbaru.
+          </p>
+        </div>
+
+        <!-- Video Trailer Placeholder Slot -->
+        <div id="trailer" class="mb-12 max-w-2xl mx-auto">
+          <div class="w-full h-64 sm:h-72 border-2 border-dashed border-gray-400 bg-gray-200 flex flex-col items-center justify-center p-6 text-gray-500">
+            <span class="font-mono text-sm font-bold">[IFRAME / EMBED: Official YouTube Trailer]</span>
+            <span class="text-xs mt-2 text-gray-500">(Placeholder pemutar video trailer game resmi)</span>
+          </div>
+        </div>
+
+        <!-- Platform Links Grid (5 Kolom di Layar Lebar) -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          
+          <!-- Steam -->
+          <div class="border-2 border-gray-800 bg-gray-50 p-4 text-center flex flex-col justify-between h-28">
+            <span class="font-mono text-xs text-gray-500">[ICON: Steam]</span>
+            <span class="font-bold text-sm text-gray-900">Steam (PC)</span>
+            <span class="text-[11px] font-mono text-gray-600">[LINK KE STORE]</span>
+          </div>
+
+          <!-- PlayStation -->
+          <div class="border-2 border-gray-800 bg-gray-50 p-4 text-center flex flex-col justify-between h-28">
+            <span class="font-mono text-xs text-gray-500">[ICON: PlayStation]</span>
+            <span class="font-bold text-sm text-gray-900">PlayStation 4/5</span>
+            <span class="text-[11px] font-mono text-gray-600">[LINK KE STORE]</span>
+          </div>
+
+          <!-- Xbox -->
+          <div class="border-2 border-gray-800 bg-gray-50 p-4 text-center flex flex-col justify-between h-28">
+            <span class="font-mono text-xs text-gray-500">[ICON: Xbox]</span>
+            <span class="font-bold text-sm text-gray-900">Xbox One / Series</span>
+            <span class="text-[11px] font-mono text-gray-600">[LINK KE STORE]</span>
+          </div>
+
+          <!-- Nintendo Switch -->
+          <div class="border-2 border-gray-800 bg-gray-50 p-4 text-center flex flex-col justify-between h-28">
+            <span class="font-mono text-xs text-gray-500">[ICON: Switch]</span>
+            <span class="font-bold text-sm text-gray-900">Nintendo Switch</span>
+            <span class="text-[11px] font-mono text-gray-600">[LINK KE STORE]</span>
+          </div>
+
+          <!-- iOS -->
+          <div class="border-2 border-gray-800 bg-gray-50 p-4 text-center flex flex-col justify-between h-28 col-span-2 sm:col-span-1">
+            <span class="font-mono text-xs text-gray-500">[ICON: Apple]</span>
+            <span class="font-bold text-sm text-gray-900">App Store (iOS)</span>
+            <span class="text-[11px] font-mono text-gray-600">[LINK KE STORE]</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="bg-gray-200 border-t border-gray-300 py-8 text-center text-xs text-gray-600 leading-relaxed">
+    <div class="max-w-4xl mx-auto px-4 space-y-2">
+      <div class="font-mono text-gray-500 uppercase tracking-wider text-[11px]">
+        [FOOTER DISCLAIMER & CREDITS]
+      </div>
+      <p class="font-medium text-gray-700">
+        Dibuat oleh [Nama Tim] untuk Lomba Web Development IT FEST UNW 2026.
+      </p>
+      <p>
+        Ini adalah proyek fan-made non-komersial untuk kepentingan kompetisi, bukan situs resmi.
+      </p>
+      <p class="text-gray-500">
+        Seluruh hak cipta game "A Space for the Unbound" dimiliki oleh Mojiken Studio &amp; Toge Productions.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
